@@ -1,0 +1,153 @@
+/*StyleHome.css*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #75b8fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e3d58;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+header .icons a {
+    margin-left: 20px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+header .icons a:hover {
+    color: #ff8c00;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-sm-6, .col-md-4, .col-lg-3 {
+    padding: 15px;
+}
+
+.isotope-item {
+    margin-bottom: 30px;
+}
+
+.block2 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.block2-pic {
+    position: relative;
+    overflow: hidden;
+}
+
+.block2-pic img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.block2-pic:hover img {
+    transform: scale(1.05);
+}
+
+.block2-txt {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-top: 1px solid #eaeaea;
+}
+
+.block2-txt-child1 {
+    margin-bottom: 15px;
+}
+
+.block2-txt-child1 a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.block2-txt-child1 a:hover {
+    color: #ff8c00;
+}
+
+.block2-txt-child1 span {
+    display: block;
+    font-size: 16px;
+    color: #777;
+}
+
+.block2-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.block2-btn:hover {
+    background-color: #ff6600;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-sm-6 {
+        width: 100%;
+    }
+}
+
+
+
+header .icons a {
+    margin-left: 20px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+header .icons a:hover {
+    color: #ff8c00;
+}

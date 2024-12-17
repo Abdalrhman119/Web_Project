@@ -1,0 +1,37 @@
+CREATE DATABASE store_db;
+
+create table clients (
+    Email VARCHAR(30) NOT NULL PRIMARY KEY,
+    password VARCHAR(40) NOT NULL
+);
+create table products (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
+);
+create table cart_items (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(255) NOT NULL,
+    product_id INT(11) NOT NULL,
+    quantity INT(11) NOT NULL,
+    FOREIGN KEY (user_email) REFERENCES clients(Email),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+
+INSERT INTO products (id, name, price, image, description)
+VALUES
+(1, 'Super Slim Laptop', 16999.99, 'img/product01.png', 'A super slim laptop with high performance and sleek design.'),
+(2, 'Headphone', 500.00, 'img/product02.png', 'High-quality headphones with excellent sound clarity and comfort.'),
+(3, 'Apple Mac', 999999.99, 'img/product03.png', 'Apple MacBook with Retina display and powerful performance.'),
+(4, 'Tablet', 7999.00, 'img/product04.png', 'A versatile tablet with a large screen and powerful features.'),
+(5, 'Sony Headphone', 999.99, 'img/product05.png', 'Sony headphones with noise-canceling technology and premium sound quality.'),
+(6, 'Gaming Laptop', 70000.00, 'img/product06.png', 'A gaming laptop designed for high-end games with powerful GPU.'),
+(7, 'Samsung S8', 8999.00, 'img/product07.png', 'Samsung Galaxy S8 with a stunning display and exceptional camera.'),
+(8, 'Asus Laptop', 25000.00, 'img/product08.png', 'Asus laptop with a powerful processor and great battery life.'),
+(9, 'Camera', 1500.00, 'img/product09.png', 'A high-quality camera with HD resolution and advanced features.'),
+(10, 'MacBook', 999999999.99, 'img/product010.png', 'Latest MacBook Pro with M1 chip and incredible performance.'),
+(11, 'Phone Stand', 50.00, 'img/product011.png', 'A simple phone stand for holding your device while you work or watch.'),
+(12, 'Dell Laptop', 24000.00, 'img/product012.png', 'Dell laptop with high speed and great value for money.');
